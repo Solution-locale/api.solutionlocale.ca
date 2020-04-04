@@ -25,6 +25,10 @@ Route::prefix('v1/')->name('v1.')->group(function () {
 
         Route::get('/categories', 'CategoryController@index')->name('categories.index');
         Route::get('/categories/{category}', 'CategoryController@show')->name('categories.show');
+
+        Route::get('/place-types', 'PlaceTypeController@index')->name('place-types.index');
+        Route::get('/place-types/{type}', 'PlaceTypeController@show')->name('place-types.show');
+
         Route::get('/delivery-types', 'DeliveryTypeController@index')->name('delivery-types.index');
         Route::get('/delivery-types/{type}', 'DeliveryTypeController@show')->name('delivery-types.show');
     });
