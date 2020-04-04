@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Place;
+use App\Rcm;
 use Illuminate\Database\Eloquent\Model;
 
 class Region extends Model
@@ -18,8 +19,8 @@ class Region extends Model
     //     return $this->hasMany(Place::class);
     // }
 
-    // public function rcm()
-    // {
-    //     return $this->hasMany(Rcm::class);
-    // }
+    public function rcm()
+    {
+        return $this->hasMany(Rcm::class);
+    }
 }
