@@ -17,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('v1/')->name('v1.')->group(function () {
     
     Route::middleware(['auth:api', 'scope:read'])->group(function () {
-        //
+        Route::get('/regions', 'RegionController@index')->name('regions.index');
+        Route::get('/regions/{region}', 'RegionController@show')->name('regions.show');
     });
 
     Route::middleware(['auth:api', 'scope:write'])->group(function () {
