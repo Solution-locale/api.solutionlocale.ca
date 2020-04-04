@@ -22,6 +22,9 @@ Route::prefix('v1/')->name('v1.')->group(function () {
 
         Route::get('/rcms', 'RcmController@index')->name('rcms.index');
         Route::get('/rcms/{rcm}', 'RcmController@show')->name('rcms.show');
+
+        Route::get('/categories', 'CategoryController@index')->name('categories.index');
+        Route::get('/categories/{category}', 'CategoryController@show')->name('categories.show');
     });
 
     Route::middleware(['auth:api', 'scope:write'])->group(function () {
