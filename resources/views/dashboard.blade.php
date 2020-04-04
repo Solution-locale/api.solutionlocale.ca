@@ -21,6 +21,7 @@
                         <li>Approved to use API: <b>{{ $user->is_approved ? "Yes" : "No" }}</b>.</li>
                         <li>Approved to use read endpoint from API : <b>{{ $user->can_read ? "Yes" : "No" }}</b>.</li>
                         <li>Approved to use write endpoint from API : <b>{{ $user->can_write ? "Yes" : "No" }}</b>.</li>
+                        <li>Current rate limit : {{ $user->rate_limit }} calls per minutes.</li>
                     </ul>
                 </div>
             </div>
