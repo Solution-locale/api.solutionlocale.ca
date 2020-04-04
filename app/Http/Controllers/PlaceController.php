@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Category;
+use App\Place;
 use Illuminate\Http\Request;
 
 class PlaceController extends Controller
@@ -14,17 +14,17 @@ class PlaceController extends Controller
      */
     public function index()
     {
-        return Category::all();
+        return Place::all();
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Category  $category
+     * @param  \App\Place  $place
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show(Place $place)
     {
-        return $category;
+        return $place;
     }
 }

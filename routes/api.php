@@ -31,6 +31,9 @@ Route::prefix('v1/')->name('v1.')->group(function () {
 
         Route::get('/delivery-types', 'DeliveryTypeController@index')->name('delivery-types.index');
         Route::get('/delivery-types/{type}', 'DeliveryTypeController@show')->name('delivery-types.show');
+
+        Route::get('/places', 'PlaceController@index')->name('places.index');
+        Route::get('/places/{place}', 'PlaceController@show')->name('places.show');
     });
 
     Route::middleware(['auth:api', 'scope:write'])->group(function () {
