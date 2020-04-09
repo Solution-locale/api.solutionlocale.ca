@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="#">Documentation</a>
+                    <a href="https://solution-locale.github.io/api.solutionlocale.ca/#/">Documentation</a>
                     <a href="https://github.com/Solution-locale">Github</a>
                 </div>
             </div>
