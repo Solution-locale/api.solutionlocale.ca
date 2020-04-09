@@ -32,8 +32,8 @@ Route::prefix('v1/')->name('v1.')->middleware(['throttle:rate_limit,1'])->group(
         Route::get('/delivery-types', 'DeliveryTypeController@index')->name('delivery-types.index');
         Route::get('/delivery-types/{type}', 'DeliveryTypeController@show')->name('delivery-types.show');
 
-        // Route::get('/rcms', 'RcmController@index')->name('rcms.index');
-        // Route::get('/rcms/{rcm}', 'RcmController@show')->name('rcms.show');
+        Route::get('/rcms', 'RcmController@index')->name('rcms.index');
+        Route::get('/rcms/{rcm}', 'RcmController@show')->name('rcms.show');
     });
 
     Route::middleware(['auth:api', 'scope:write'])->group(function () {
