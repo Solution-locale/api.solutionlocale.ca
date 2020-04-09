@@ -19,6 +19,9 @@ Route::prefix('v1/')->name('v1.')->middleware(['throttle:rate_limit,1'])->group(
     Route::middleware(['auth:api', 'scope:read'])->group(function () {
         Route::get('/places', 'PlaceController@index')->name('places.index');
         Route::get('/places/{place}', 'PlaceController@show')->name('places.show');
+
+        Route::get('/categories', 'CategoryController@index')->name('categories.index');
+        Route::get('/categories/{category}', 'CategoryController@show')->name('categories.show');
         
         Route::get('/regions', 'RegionController@index')->name('regions.index');
         Route::get('/regions/{region}', 'RegionController@show')->name('regions.show');
