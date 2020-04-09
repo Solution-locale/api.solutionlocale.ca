@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\RcmCollection;
+use App\Http\Resources\RCM as RcmResource;
 use App\Rcm;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,7 @@ class RcmController extends Controller
      */
     public function index()
     {
-        return Rcm::all();
+        return new RcmCollection(Rcm::paginate());
     }
 
     /**
@@ -25,6 +27,6 @@ class RcmController extends Controller
      */
     public function show(Rcm $rcm)
     {
-        return $rcm;
+        return new RcmResource($rcm);
     }
 }

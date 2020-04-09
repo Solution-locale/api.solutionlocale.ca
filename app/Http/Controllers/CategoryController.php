@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Http\Resources\Category as CategoryResource;
+use App\Http\Resources\CategoryCollection;
 use Illuminate\Http\Request;
 
-class PlaceController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +16,7 @@ class PlaceController extends Controller
      */
     public function index()
     {
-        return Category::all();
+        return new CategoryCollection(Category::paginate());
     }
 
     /**
@@ -25,6 +27,6 @@ class PlaceController extends Controller
      */
     public function show(Category $category)
     {
-        return $category;
+        return new CategoryResource($category);
     }
 }

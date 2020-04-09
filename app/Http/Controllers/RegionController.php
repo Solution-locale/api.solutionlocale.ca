@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\RegionCollection;
+use App\Http\Resources\Region as RegionResource;
 use App\Region;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,7 @@ class RegionController extends Controller
      */
     public function index()
     {
-        return Region::all();
+        return new RegionCollection(Region::paginate());
     }
 
     /**
@@ -25,6 +27,6 @@ class RegionController extends Controller
      */
     public function show(Region $region)
     {
-        return $region;
+        return new RegionResource($region);
     }
 }

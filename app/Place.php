@@ -40,4 +40,9 @@ class Place extends Model
     {
         return $this->belongsToMany(DeliveryType::class);
     }
+
+    public function partner()
+    {
+        return $this->belongsTo(Partner::class);
+    }
 }

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Place as PlaceResource;
+use App\Http\Resources\PlaceCollection;
 use App\Place;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,7 @@ class PlaceController extends Controller
      */
     public function index()
     {
-        return Place::all();
+        return new PlaceCollection(Place::where('is_approved', true)->paginate());
     }
 
     /**
@@ -25,6 +27,6 @@ class PlaceController extends Controller
      */
     public function show(Place $place)
     {
-        return $place;
+        return new PlaceResource($place);
     }
 }

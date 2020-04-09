@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\DeliveryType;
+use App\Http\Resources\DeliveryTypeCollection;
+use App\Http\Resources\DeliveryType as DeliveryTypeResource;
 use Illuminate\Http\Request;
 
 class DeliveryTypeController extends Controller
@@ -14,7 +16,7 @@ class DeliveryTypeController extends Controller
      */
     public function index()
     {
-        return DeliveryType::all();
+        return new DeliveryTypeCollection(DeliveryType::paginate());
     }
 
     /**
@@ -25,6 +27,6 @@ class DeliveryTypeController extends Controller
      */
     public function show(DeliveryType $type)
     {
-        return $type;
+        return new DeliveryTypeResource($type);
     }
 }
