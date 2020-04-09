@@ -21,7 +21,7 @@ class Place extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'slug' => $this->name,
+            'slug' => $this->slug,
             'address' => [
                 'postal' => $this->hide_address ? false : [
                     'line_1' => $this->address,
