@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\PlaceTypeCollection;
+use App\Http\Resources\PlaceType as PlaceTypeResource;
 use App\PlaceType;
 use Illuminate\Http\Request;
 
@@ -14,7 +16,7 @@ class PlaceTypeController extends Controller
      */
     public function index()
     {
-        return PlaceType::all();
+        return new PlaceTypeCollection(PlaceType::paginate());
     }
 
     /**
@@ -25,6 +27,6 @@ class PlaceTypeController extends Controller
      */
     public function show(PlaceType $type)
     {
-        return $type;
+        return new PlaceTypeResource($type);
     }
 }
