@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.1.0 (2020-04-09)
+- First version of docs completed.
+
 # 1.0.0 (2020-04-09)
 - Prepared routes for caching.
 - Changed default value for new users.
