@@ -86,6 +86,7 @@
 
                 <div class="links">
                     <a href="#">Documentation</a>
+                    <a href="https://github.com/Solution-locale">Github</a>
                 </div>
             </div>
         </div>
