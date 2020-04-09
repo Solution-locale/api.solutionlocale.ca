@@ -26,6 +26,8 @@ Deux choix s'offriront à vous: autentication par `oauth` et par `clé d'api`.
 
 Nous préconisons la méthode par `clé`, cependant, si votre application est compatible, la méthode `oauth` est la plus sécuritaire (et donc à privilégier plus votre limite de congestion est permissive).
 
+!> Les clés générés par l'API sont valide pour une année. Vous devrez soit vous réautoriser ponctuellement en méthode `oauth` ou regénérer une nouvelle `clé d'api` après une année.
+
 ## Autentication Oauth2
 
 Suivre les instructions à l'écrans. *Nous ne donnons pas de support pour mettre en oeuvre une implémentation Oauth2 à vos applications*. Si vous êtes incertains de vos capacités à implémenter ce support, référez vous à l'autentication par clé d'API.
