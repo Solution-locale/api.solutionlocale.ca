@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use App\Http\Resources\Category;
 use App\Http\Resources\DeliveryType;
+use App\Http\Resources\PlaceType;
 use App\Http\Resources\RCM;
 use App\Http\Resources\Region;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -52,7 +53,7 @@ class Place extends JsonResource
                     'facebook' => $this->facebook_url,
                 ],
             ],
-            'place_types' => "",
+            'place_types' => PlaceType::collection($this->types),
             'categories' => Category::collection($this->categories),
             'covid19' => [
                 'delivery_zone' => $this->deliveryZone,
@@ -62,6 +63,7 @@ class Place extends JsonResource
                 'public' => is_null($this->partner_id),
                 'partner' =>  is_null($this->partner) ? null : false, //new Partner($this->partner),
             ],
+            'url' => "https://solutionlocale.ca/places/{$this->slug}",
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];
