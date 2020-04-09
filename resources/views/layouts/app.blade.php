@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <a class="nav-link" href="{{ route("dashboard") }}">Panneau de contrôle</a>
-                        <a class="nav-link" href="#">Documentation</a>
+                        <a class="nav-link" href="https://solution-locale.github.io/api.solutionlocale.ca/#/">Documentation</a>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
