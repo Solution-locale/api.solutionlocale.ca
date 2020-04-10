@@ -11,11 +11,11 @@
                 <div class="card-header">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
                         <span>
-                            Personal Access Tokens
+                            Clés d'API
                         </span>
 
                         <a class="action-link" tabindex="-1" @click="showCreateTokenForm">
-                            Create New Token
+                            Créer une nouvelle clé
                         </a>
                     </div>
                 </div>
@@ -23,14 +23,14 @@
                 <div class="card-body">
                     <!-- No Tokens Notice -->
                     <p class="mb-0" v-if="tokens.length === 0">
-                        You have not created any personal access tokens.
+                        Vous n'avez créé aucune clé d'API
                     </p>
 
                     <!-- Personal Access Tokens -->
                     <table class="table table-borderless mb-0" v-if="tokens.length > 0">
                         <thead>
                             <tr>
-                                <th>Name</th>
+                                <th>Nom</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -45,7 +45,7 @@
                                 <!-- Delete Button -->
                                 <td style="vertical-align: middle;">
                                     <a class="action-link text-danger" @click="revoke(token)">
-                                        Delete
+                                        Détruire
                                     </a>
                                 </td>
                             </tr>
@@ -61,7 +61,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">
-                            Create Token
+                            Créer une clé
                         </h4>
 
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -70,7 +70,7 @@
                     <div class="modal-body">
                         <!-- Form Errors -->
                         <div class="alert alert-danger" v-if="form.errors.length > 0">
-                            <p class="mb-0"><strong>Whoops!</strong> Something went wrong!</p>
+                            <p class="mb-0"><strong>Whoops!</strong> Il y a une erreur !</p>
                             <br>
                             <ul>
                                 <li v-for="error in form.errors">
@@ -83,7 +83,7 @@
                         <form role="form" @submit.prevent="store">
                             <!-- Name -->
                             <div class="form-group row">
-                                <label class="col-md-4 col-form-label">Name</label>
+                                <label class="col-md-4 col-form-label">Nom</label>
 
                                 <div class="col-md-6">
                                     <input id="create-token-name" type="text" class="form-control" name="name" v-model="form.name">
@@ -116,7 +116,7 @@
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
 
                         <button type="button" class="btn btn-primary" @click="store">
-                            Create
+                            Créer
                         </button>
                     </div>
                 </div>
@@ -129,7 +129,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h4 class="modal-title">
-                            Personal Access Token
+                            Clé d'API
                         </h4>
 
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -137,8 +137,8 @@
 
                     <div class="modal-body">
                         <p>
-                            Here is your new personal access token. This is the only time it will be shown so don't lose it!
-                            You may now use this token to make API requests.
+                            Voici votre nouvelle clé d'API. Ceci est le seul moment où elle sera affichée, ne la perdez pas!
+                            Vous pouvez maintenant l'utiliser pour faire des requêtes à l'API.
                         </p>
 
                         <textarea class="form-control" rows="10">{{ accessToken }}</textarea>
@@ -146,7 +146,7 @@
 
                     <!-- Modal Actions -->
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
                     </div>
                 </div>
             </div>
