@@ -1,15 +1,15 @@
 # Place types
 
-Un `placeType` est un objet qui représente une entité qualifiant une `place` selon des critères établis par Solution locale.
+Un `placeType` est une entité qui qualifie d'une entité d'entreprise (`place`) selon les critères établis par Solution locale.
 
 ## Attributs de l'objet `placeType`
 
-- `id` : identifiant numérique de l'entité dans la base de donnée.
-- `name` : nom du `placeType`.
+- `id` : identifiant numérique de l'entité.
+- `name` : nom de l'entité.
 
 ## GET /place-types
 
-Retournera l'entièreté des `placeType` de notre base de donnée, paginée à 15 `placeType` par page.
+Retourne l'entièreté des `placeType`, paginée à 15 `placeType` par page.
 
 ### Exemple de réponse
 
@@ -49,7 +49,7 @@ Retournera l'entièreté des `placeType` de notre base de donnée, paginée à 1
 
 ## GET /place-type/{id}
 
-Retournera l'entité `placeType` de notre base de donnée, correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
+Retourne l'entité `placeType` correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
 
 ### Exemple de réponse
 

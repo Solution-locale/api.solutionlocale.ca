@@ -1,16 +1,16 @@
 # Categories
 
-Une `categorie` est un objet qui représente une possible qualification d'une entité de commerce dans la base de donnée.
+Une `categorie` est un objet qui qualifie une entité d'entreprise (`place`).
 
 ## Attributs de l'objet `category`
 
-- `id` : identifiant numérique de l'entité dans la base de donnée.
-- `name` : nom de la catégorie.
-- `parent_id` : `id` de la catégorie parent ou `null` si catégorie de premier niveau.
+- `id` : identifiant numérique de l'entité.
+- `name` : nom de l'entité.
+- `parent_id` : `id` de la catégorie parent ou `null` si l'entité est une catégorie de premier niveau.
 
 ## GET /categories
 
-Retournera l'entièreté des `category` de notre base de donnée, paginée à 15 `category` par page.
+Retourne l'entièreté des `category`, paginé à 15 entités par page.
 
 ### Exemple de réponse
 
@@ -48,7 +48,7 @@ Retournera l'entièreté des `category` de notre base de donnée, paginée à 15
 
 ## GET /categories/{id}
 
-Retournera l'entité `category` de notre base de donnée, correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
+Retourne l'entité `category` correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
 
 ### Exemple de réponse
 

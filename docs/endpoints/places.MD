@@ -1,35 +1,35 @@
 # Places
 
-Une `place` est un objet qui représente une entité de commerce dans la base de donnée, _qui à été approuvé par les modérateurs_, donc qui s'affiche publiquement au répertoire. 
+Une `place` est une entité d'entreprise _qui à été approuvée par les modérateurs de Solution locale_, donc qui s'affiche publiquement au répertoire. 
 
 ## Attributs de l'objet `place`
 
-- `id` : identifiant numérique de l'entité dans la base de donnée.
+- `id` : identifiant numérique de l'entité.
 - `name` : nom de l'entreprise.
-- `slug` : un _slug_ basé sur le nom de l'entreprise et, potentiellement, une chaîne de caractère unique. Utilisé pour générer les URL sur solutionlocale.ca
+- `slug` : un « slug » basé sur le nom de l'entreprise et, potentiellement, une chaîne de caractère unique. Utilisé pour générer les URL sur solutionlocale.ca
 - `address` : contient de l'information sur l'emplacement du commerce.
-	- `postal` : contient un des trois choix suivant: `null` si l'adresse est inconnue; `false` si le commerçant à choisi de garder l'adressse secrète ou un objet d'adresse postale.
-	- `administrative` : contient un objet renseignant certains renseignements autres au sujet de l'emplacement de l'entreprise, spécifiquement: `region` retourne un objet [region](/endpoints/regions) (région administrative québécoise) et, si l'information est connue, `rcm` objet [rcm](/endpoints/RCMs) (municipalité régionale de comté) ou `null` le cas échéant.
-- `geo` : contient un objet aidant à la géolocalisation de l'emplacement.
+	- `postal` : contient un des trois choix suivant: `null` si l'adresse est inconnue; `false` si le commerçant a demandé de garder l'adressse secrète ou un objet contenant les informations d'adresse postale.
+	- `administrative` : contient un objet contenant certains autres renseignements au sujet de l'emplacement de l'entreprise. Spécifiquement: `region` retourne un objet [region](/endpoints/regions) (une région administrative du Québec) et, si l'information est connue, un objet [rcm](/endpoints/RCMs) (une municipalité régionale de comté) ou `null` le cas échéant.
+- `geo` : contient un objet contenant de l'information de géolocalisation.
 	- `lat` : une valeur de latitude.
 	- `lng` : une valeur de longitude.
-	- `plus_code` : le [Plus Code](https://plus.codes/) permetant un lien sur les services le supportant, notamment Google Maps, s'il est connu.
+	- `plus_code` : le [Plus Code](https://plus.codes/) permetant un lien sur les services qui implémentent ce standard, notamment Google Maps, s'il est connu.
 - `contact` : `null` lorsque l'information est inconnue, `false` lorsque l'information est cachée du public, ou un objet contenant les divers moyens de contact connu de l'entreprise comprenant courriels, numéros de téléphone et URL de site web et facebook.
-- `place_types` : contient un `array` d'objets [placeType](/endpoints/placeTypes) associés à cette entreprise.
-- `categories` : contient un `array` d'objets [category](/endpoints/categories) associés à cette entreprise.
-- `covid19`: contient un objet renseignant certaines informations connues relative à la crise sanitaire et l'entreprise, notemment:
-	- `delivery_type` : contient un `array` d'objets [deliveryType](/endpoints/deliveryTypes) associés à cette entreprise.
+- `place_types` : contient une ou plusieurs entité [placeType](/endpoints/placeTypes) associées à cette entreprise.
+- `categories` : contient une ou plusieurs entité [category](/endpoints/categories) associées à cette entreprise.
+- `covid19`: contient certaines informations connues relative à la crise sanitaire et la situation de l'entreprise, notamment:
+	- `delivery_type` : contient une ou plusieurs entité [deliveryType](/endpoints/deliveryTypes) associées à cette entreprise.
 	- `delivery_zone` : les restrictions de livraisons, lorsque l'entreprise offre la livraison sans contact.
-- `source` : la provenance de l'information.
-	- `public` : `true` si l'entreprise à été inscrite via notre formulaire sur le site web.
-	- `partner` :  contient l'information du partenaire si l'information nous à été fourni par un organisme externe à Solution locale.
+- `source` : la provenance de l'information au sujet de l'entreprise.
+	- `public` : `true` si l'entreprise à été inscrite par notre formulaire sur le site web, `false` le cas échéant.
+	- `partner` :  contient une ou plusieurs entité [deliveryType](/endpoints/deliveryTypes) associées à cette entreprise.
 - `url` : URL vers la fiche de l'entreprise sur le site de Solution locale.
 - `created_at` : `timestamp` qui représente la date de création de cette fiche dans la base de donnée.
 - `updated_at` : `timestamp` qui représente la date de la dernière modification de cette fiche dans la base de donnée. 
 
 ## GET /places
 
-Retournera l'entièreté des `place` de notre base de donnée, paginée à 15 `places` par page.
+Retourne l'entièreté des `place`, paginée à 15 `places` par page.
 
 ### Exemple de réponse
 
@@ -134,7 +134,7 @@ Retournera l'entièreté des `place` de notre base de donnée, paginée à 15 `p
 
 ## GET /places/{id}
 
-Retournera l'entité `place` de notre base de donnée, correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
+Retourne l'entité `place` correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
 
 ### Exemple de réponse
 

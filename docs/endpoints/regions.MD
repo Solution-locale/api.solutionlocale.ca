@@ -1,16 +1,18 @@
 # Regions
 
-Une `region` est un objet qui représente une entité administrative provinciale (région administrative) à la province de Québec.
+Une `region` est une entité qui représente une entité administrative provinciale (région administrative) à la province de Québec.
+
+Une `region` est une entité qui représente un type de découpage géographique de la province de Québec, les régions d'administratives.
 
 ## Attributs de l'objet `region`
 
-- `id` : identifiant numérique de l'entité dans la base de donnée.
-- `name` : nom de la catégorie.
-- `slug` : un _slug_ basé sur le nom de la région et, potentiellement, une chaîne de caractère unique. Utilisé pour générer les URL sur solutionlocale.ca.
+- `id` : identifiant numérique de l'entité.
+- `name` : nom de l'entité.
+- `slug` : un « slug » basé sur le nom de l'entreprise et, potentiellement, une chaîne de caractère unique. Utilisé pour générer les URL sur solutionlocale.ca
 
 ## GET /regions
 
-Retournera l'entièreté des `region` de notre base de donnée, paginée à 15 `region` par page.
+Retourne l'entièreté des `region`, paginée à 15 `region` par page.
 
 ### Exemple de réponse
 
@@ -43,7 +45,7 @@ Retournera l'entièreté des `region` de notre base de donnée, paginée à 15 `
 
 ## GET /region/{id}
 
-Retournera l'entité `region` de notre base de donnée, correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
+Retourne l'entité `region` correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
 
 ### Exemple de réponse
 
