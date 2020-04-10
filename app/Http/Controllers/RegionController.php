@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\RegionCollection;
+use App\Helpers\SaveStats;
 use App\Http\Resources\Region as RegionResource;
+use App\Http\Resources\RegionCollection;
 use App\Region;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
 
 class RegionController extends Controller
 {
@@ -16,6 +17,7 @@ class RegionController extends Controller
      */
     public function index()
     {
+        new SaveStats();
         return new RegionCollection(Region::paginate());
     }
 
@@ -27,6 +29,7 @@ class RegionController extends Controller
      */
     public function show(Region $region)
     {
+        new SaveStats();
         return new RegionResource($region);
     }
 }

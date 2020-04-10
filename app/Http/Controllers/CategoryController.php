@@ -16,6 +16,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        new SaveStats();
         return new CategoryCollection(Category::paginate());
     }
 
@@ -27,6 +28,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
+        new SaveStats();
         return new CategoryResource($category);
     }
 }
