@@ -6,6 +6,10 @@ Ou comment avoir accès à l'API et les données de solutionlocale.ca.
 
 L'API est ouvert, gratuitement, à toute personne qui désire la consulter. Mais afin de donner un répis à nos (petites) resources informatique, nous imposons un mécanisme de contrôle de congestion (_rate limiting_) pour chaque appel à l'API. Afin de mettre en place ce mécanisme, vous devrez donc obtenir une clé d'API que vous pouvez générer en créant vous un compte.
 
+## Attribution
+
+La seule contrainte d'utilisation de notre API est d'en faire l'attribution si vous utilisez ses données. Une mention devrait se trouver dans votre site, ou application, qui devrait se lire comme suit: `Données provenant en tout, ou en partie, de solutionlocale.ca`.
+
 ## Contrôle de congestion (_rate limiting_)
 
 Par défaut, le mécanisme de contrôle de gestion est extrêmement limitatif. Il permet un maximum de `2` appels d'API par minutes, par clé d'API. Cette limite vous permet de consulter tranquillement les ressources de l'API.
