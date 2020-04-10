@@ -1,5 +1,8 @@
 # Changelog
 
+# Next
+- Added contextual informations for logged in users.
+
 # 1.1.0 (2020-04-09)
 - First version of docs completed.
 

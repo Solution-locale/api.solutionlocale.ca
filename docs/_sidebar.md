@@ -1,5 +1,5 @@
 * [Accueil](/)
-* [Autentification](/autentification)
+* [Authentification](/authentification)
 * [API : /v1/categories](/endpoints/categories)
 * [API : /v1/delivery-types](/endpoints/deliveryTypes)
 * [API : /v1/places](/endpoints/places)

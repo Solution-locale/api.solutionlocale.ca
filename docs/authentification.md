@@ -1,4 +1,4 @@
-# Autentification et limites
+# Authentification et limites
 
 Ou comment avoir accès à l'API et les données de solutionlocale.ca.
 
@@ -26,17 +26,17 @@ Vous pouvez également consulter les entêtes `X-RateLimit-Limit`, `X-RateLimit-
 
 Il ne suffit que de se rendre sur [la page d'inscription](https://api.solutionlocale.ca/register) et renseigner les champs demandés. Vous aurez ensuite accès à l'interface de gestion des clés.
 
-Deux choix s'offriront à vous: autentication par `oauth` et par `clé d'api`.
+Deux choix s'offriront à vous: authentification par `oauth` et par `clé d'api`.
 
 Nous préconisons la méthode par `clé`, cependant, si votre application est compatible, la méthode `oauth` est la plus sécuritaire (et donc à privilégier plus votre limite de congestion est permissive).
 
 !> Les clés générés par l'API sont valide pour une année. Vous devrez soit vous réautoriser ponctuellement en méthode `oauth` ou regénérer une nouvelle `clé d'api` après une année.
 
-## Autentication Oauth2
+## Authentification Oauth2
 
 Suivre les instructions à l'écrans. *Nous ne donnons pas de support pour mettre en oeuvre une implémentation Oauth2 à vos applications*. Si vous êtes incertains de vos capacités à implémenter ce support, référez vous à l'autentication par clé d'API.
 
-## Autentication par clé d'API.
+## Authentification par clé d'API.
 
 Entrez un nom pour votre clé et choisisse les permisions associés à celle-ci.
 
