@@ -4,6 +4,7 @@
 - Added contextual informations for logged in users.
 - Fixed typos.
 - Fixed the returned attribute name for IDs of `region`.
+- Added endpoint for partners.
 
 # 1.1.0 (2020-04-09)
 - First version of docs completed.
