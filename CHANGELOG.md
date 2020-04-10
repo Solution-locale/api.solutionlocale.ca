@@ -1,5 +1,8 @@
 # Changelog
 
+# 1.2.1 (2020-04-10)
+- Lower case file name so Github pages and Jekyll won't cry.
+
 # 1.2.0 (2020-04-09)
 - Added contextual informations for logged in users.
 - Fixed typos.
