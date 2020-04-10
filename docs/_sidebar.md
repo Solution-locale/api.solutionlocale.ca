@@ -2,6 +2,7 @@
 * [Authentification](/authentification)
 * [API : /v1/categories](/endpoints/categories)
 * [API : /v1/delivery-types](/endpoints/deliveryTypes)
+* [API : /v1/partners](/endpoints/partners)
 * [API : /v1/places](/endpoints/places)
 * [API : /v1/place-types](/endpoints/placeTypes)
 * [API : /v1/rcms](/endpoints/RCMs)

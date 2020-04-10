@@ -47,7 +47,7 @@ Retourne l'entièreté des `placeType`, paginée à 15 `placeType` par page.
 }
 ```
 
-## GET /place-type/{id}
+## GET /place-types/{id}
 
 Retourne l'entité `placeType` correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
 

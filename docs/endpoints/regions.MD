@@ -43,7 +43,7 @@ Retourne l'entièreté des `region`, paginée à 15 `region` par page.
 }
 ```
 
-## GET /region/{id}
+## GET /regions/{id}
 
 Retourne l'entité `region` correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
 

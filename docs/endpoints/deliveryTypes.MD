@@ -51,7 +51,7 @@ Retourne l'entièreté des `deliveryType`, paginé à 15 entités par page.
 }
 ```
 
-## GET /delivery-type/{id}
+## GET /delivery-types/{id}
 
 Retournera l'entité `deliveryType` correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
 

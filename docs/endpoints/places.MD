@@ -22,7 +22,7 @@ Une `place` est une entité d'entreprise _qui à été approuvée par les modér
 	- `delivery_zone` : les restrictions de livraisons, lorsque l'entreprise offre la livraison sans contact.
 - `source` : la provenance de l'information au sujet de l'entreprise.
 	- `public` : `true` si l'entreprise à été inscrite par notre formulaire sur le site web, `false` le cas échéant.
-	- `partner` :  contient une ou plusieurs entité [deliveryType](/endpoints/deliveryTypes) associées à cette entreprise.
+	- `partner` :  contient une ou plusieurs entité [partners](/endpoints/partners) associées à cette entreprise.
 - `url` : URL vers la fiche de l'entreprise sur le site de Solution locale.
 - `created_at` : `timestamp` qui représente la date de création de cette fiche dans la base de donnée.
 - `updated_at` : `timestamp` qui représente la date de la dernière modification de cette fiche dans la base de donnée. 
