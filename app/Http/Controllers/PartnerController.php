@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Helpers\SaveStats;
-use App\Http\Resources\Region as RegionResource;
-use App\Http\Resources\RegionCollection;
-use App\Region;
+use App\Http\Resources\Partner as PartnerResource;
+use App\Http\Resources\PartnerCollection;
+use App\Partner;
 use Illuminate\Support\Facades\Request;
 
-class RegionController extends Controller
+class PartnerController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class RegionController extends Controller
     public function index()
     {
         new SaveStats();
-        return new RegionCollection(Region::paginate());
+        return new PartnerCollection(Partner::paginate());
     }
 
     /**
@@ -27,9 +27,9 @@ class RegionController extends Controller
      * @param  \App\Region  $region
      * @return \Illuminate\Http\Response
      */
-    public function show(Region $region)
+    public function show(Partner $partner)
     {
         new SaveStats();
-        return new RegionResource($region);
+        return new PartnerResource($partner);
     }
 }

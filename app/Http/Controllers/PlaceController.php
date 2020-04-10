@@ -16,6 +16,7 @@ class PlaceController extends Controller
      */
     public function index()
     {
+        new SaveStats();
         return new PlaceCollection(Place::where('is_approved', true)->paginate());
     }
 
@@ -27,6 +28,7 @@ class PlaceController extends Controller
      */
     public function show(Place $place)
     {
+        new SaveStats();
         return new PlaceResource($place);
     }
 }

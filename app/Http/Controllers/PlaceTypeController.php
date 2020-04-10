@@ -16,6 +16,7 @@ class PlaceTypeController extends Controller
      */
     public function index()
     {
+        new SaveStats();
         return new PlaceTypeCollection(PlaceType::paginate());
     }
 
@@ -27,6 +28,7 @@ class PlaceTypeController extends Controller
      */
     public function show(PlaceType $type)
     {
+        new SaveStats();
         return new PlaceTypeResource($type);
     }
 }

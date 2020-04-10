@@ -16,6 +16,7 @@ class RcmController extends Controller
      */
     public function index()
     {
+        new SaveStats();
         return new RcmCollection(Rcm::paginate());
     }
 
@@ -27,6 +28,7 @@ class RcmController extends Controller
      */
     public function show(Rcm $rcm)
     {
+        new SaveStats();
         return new RcmResource($rcm);
     }
 }

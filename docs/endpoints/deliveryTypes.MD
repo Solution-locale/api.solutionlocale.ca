@@ -1,15 +1,15 @@
 # Delivery types
 
-Un `deliveryType` est un objet qui représente une entité qualifiant les méthodes de distributions d'une `place` selon des critères établis par Solution locale.
+Un `deliveryType` est une entité qui qualifie la ou les méthodes de distributions d'une entité d'entreprise (`place`) selon les critères établis par Solution locale.
 
 ## Attributs de l'objet `deliveryType`
 
-- `id` : identifiant numérique de l'entité dans la base de donnée.
-- `name` : nom du `deliveryType`.
+- `id` : identifiant numérique de l'entité.
+- `name` : nom de l'entité.
 
 ## GET /delivery-types
 
-Retournera l'entièreté des `deliveryType` de notre base de donnée, paginée à 15 `deliveryType` par page.
+Retourne l'entièreté des `deliveryType`, paginé à 15 entités par page.
 
 ### Exemple de réponse
 
@@ -51,9 +51,9 @@ Retournera l'entièreté des `deliveryType` de notre base de donnée, paginée �
 }
 ```
 
-## GET /delivery-type/{id}
+## GET /delivery-types/{id}
 
-Retournera l'entité `deliveryType` de notre base de donnée, correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
+Retournera l'entité `deliveryType` correspondante à `id` ou une erreur `404` lorsque l'entité est introuvable.
 
 ### Exemple de réponse
 

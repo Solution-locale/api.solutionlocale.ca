@@ -10,11 +10,11 @@
             <div class="card-header">
                 <div style="display: flex; justify-content: space-between; align-items: center;">
                     <span>
-                        OAuth Clients
+                        Clients OAuth
                     </span>
 
                     <a class="action-link" tabindex="-1" @click="showCreateClientForm">
-                        Create New Client
+                        Créer un nouveau client
                     </a>
                 </div>
             </div>
@@ -22,14 +22,14 @@
             <div class="card-body">
                 <!-- Current Clients -->
                 <p class="mb-0" v-if="clients.length === 0">
-                    You have not created any OAuth clients.
+                    Vous n'avez créé aucun client OAuth
                 </p>
 
                 <table class="table table-borderless mb-0" v-if="clients.length > 0">
                     <thead>
                         <tr>
-                            <th>Client ID</th>
-                            <th>Name</th>
+                            <th>ID client</th>
+                            <th>Nom</th>
                             <th>Secret</th>
                             <th></th>
                             <th></th>

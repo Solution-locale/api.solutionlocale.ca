@@ -16,6 +16,7 @@ class DeliveryTypeController extends Controller
      */
     public function index()
     {
+        new SaveStats();
         return new DeliveryTypeCollection(DeliveryType::paginate());
     }
 
@@ -27,6 +28,7 @@ class DeliveryTypeController extends Controller
      */
     public function show(DeliveryType $type)
     {
+        new SaveStats();
         return new DeliveryTypeResource($type);
     }
 }
