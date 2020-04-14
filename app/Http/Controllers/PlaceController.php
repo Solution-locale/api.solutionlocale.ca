@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\SaveStats;
 use App\Http\Resources\Place as PlaceResource;
 use App\Http\Resources\PlaceCollection;
 use App\Place;

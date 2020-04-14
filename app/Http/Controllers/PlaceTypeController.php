@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Resources\PlaceTypeCollection;
+use App\Helpers\SaveStats;
 use App\Http\Resources\PlaceType as PlaceTypeResource;
+use App\Http\Resources\PlaceTypeCollection;
 use App\PlaceType;
 use Illuminate\Http\Request;
 

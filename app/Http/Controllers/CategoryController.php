@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Helpers\SaveStats;
 use App\Http\Resources\Category as CategoryResource;
 use App\Http\Resources\CategoryCollection;
 use Illuminate\Http\Request;
