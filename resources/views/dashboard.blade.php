@@ -16,8 +16,8 @@
 
                     <ul>
                         <li>Vous êtes approuvés pour une utilisation de l'API: <b>{{ $user->is_approved ? "Oui" : "Non" }}</b>.</li>
-                        <li>Vous êtes approuvés pour une utilisation en lecture l'API: <b>{{ $user->can_read ? "Oui" : "Non" }}</b>.</li>
-                        <li>Vous êtes approuvés pour une utilisation en écriture l'API: <b>{{ $user->can_write ? "Oui" : "non" }}</b>.</li>
+                       {{--  <li>Vous êtes approuvés pour une utilisation en lecture l'API: <b>{{ $user->can_read ? "Oui" : "Non" }}</b>.</li>
+                        <li>Vous êtes approuvés pour une utilisation en écriture l'API: <b>{{ $user->can_write ? "Oui" : "non" }}</b>.</li> --}}
                         <li><em>Rate limit</em> actuelle : {{ $user->rate_limit }} appels d'API par minutes.</li>
                     </ul>
                     <div class="alert alert-warning">
