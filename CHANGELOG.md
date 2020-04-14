@@ -1,5 +1,9 @@
 # Changelog
 
+# Next
+- Fixed usage of helper in controller classes.
+- Removed display of unused permissions.
+
 # 1.2.1 (2020-04-10)
 - Lower case file name so Github pages and Jekyll won't cry.
 
